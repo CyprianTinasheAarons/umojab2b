@@ -4,13 +4,15 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { motion } from "framer-motion"; // Add framer-motion import
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const navItems = [
   { label: "Features", href: "#features" },
   { label: "Package", href: "#package" },
   { label: "Benefits", href: "#benefits" },
-  { label: "Contact", href: "#contact" }
+  { label: "Contact", href: "#contact" },
+  { label: "Marketplace", href: "https://marketplace.umojab2b.com" }, // Added marketplace link
 ];
 
 export function Navigation() {
@@ -22,8 +24,8 @@ export function Navigation() {
       setIsScrolled(window.scrollY > 10);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleNavClick = () => {
@@ -31,22 +33,22 @@ export function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 transition-all duration-300 ${
-      isScrolled ? 'border-b border-primary/10 shadow-sm' : ''
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md z-50 transition-all duration-300 ${
+        isScrolled ? "border-b border-primary/10 shadow-sm" : ""
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <Image
-              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=40&h=40&q=80"
-              alt="Elephant Logo"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
-            <a href="/" className="text-xl sm:text-2xl font-bold text-primary">
-              Umoja
-            </a>
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Umoja Logo"
+                width={100}
+                height={100}
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
@@ -61,7 +63,9 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <Button className="bg-primary hover:bg-primary/90">Get Started</Button>
+            <Button className="bg-primary hover:bg-primary/90">
+              Get Started
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -73,7 +77,11 @@ export function Navigation() {
               aria-label="Toggle menu"
               className="focus:outline-none"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>

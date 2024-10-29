@@ -1,29 +1,48 @@
-import { Facebook, Instagram, Linkedin, Twitter, Mail, Phone } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Twitter,
+  Mail,
+  Phone,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 const footerLinks = {
   company: [
-    { label: "About Us", href: "#" },
-    { label: "Careers", href: "#" },
-    { label: "Blog", href: "#" },
-    { label: "Press", href: "#" }
+    { label: "About Us", href: "/about" },
+    { label: "Blog", href: "https://blog.umojab2b.com" },
   ],
   support: [
-    { label: "Help Center", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Privacy Policy", href: "#" }
+    { label: "Help Center", href: "/help" },
+    { label: "Terms of Service", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy" },
   ],
   contact: [
-    { label: "hello@umojab2b.com", href: "mailto:hello@umojab2b.com", icon: <Mail className="h-4 w-4" /> },
-    { label: "+263 777 150 345", href: "tel:+263777150345", icon: <Phone className="h-4 w-4" /> },
-    { label: "+263 771 535 326", href: "tel:+263771535326", icon: <Phone className="h-4 w-4" /> }
-  ]
+    {
+      label: "hello@umojab2b.com",
+      href: "mailto:hello@umojab2b.com",
+      icon: <Mail className="h-4 w-4" />,
+    },
+    {
+      label: "+263 777 150 345",
+      href: "tel:+263777150345",
+      icon: <Phone className="h-4 w-4" />,
+    },
+    {
+      label: "+263 771 535 326",
+      href: "tel:+263771535326",
+      icon: <Phone className="h-4 w-4" />,
+    },
+  ],
 };
 
 const socialLinks = [
   { icon: <Facebook className="h-5 w-5" />, href: "#", label: "Facebook" },
   { icon: <Twitter className="h-5 w-5" />, href: "#", label: "Twitter" },
   { icon: <Instagram className="h-5 w-5" />, href: "#", label: "Instagram" },
-  { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" }
+  { icon: <Linkedin className="h-5 w-5" />, href: "#", label: "LinkedIn" },
 ];
 
 export function Footer() {
@@ -33,9 +52,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Column */}
           <div>
-            <h2 className="text-2xl font-bold mb-4 text-primary">Umoja</h2>
+            <Link href="/">
+              <Image
+                src="/logo.svg"
+                alt="Umoja Logo"
+                width={100}
+                height={100}
+                className="mb-4"
+              />
+            </Link>
             <p className="text-sm text-muted-foreground mb-4">
-              Empowering businesses to thrive in the digital world with comprehensive online solutions.
+              Empowering businesses to thrive in the digital world with
+              comprehensive online solutions.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
