@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Accordion,
   AccordionContent,
@@ -11,25 +10,40 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 const faqs = [
   {
-    question: "Is my data secure with Umoja?",
-    answer: "Yes, we use industry-standard encryption to protect your information. Your business data is stored securely and is never shared with third parties without your consent."
+    question: "How secure is my business data with Umoja B2B?",
+    answer:
+      "We prioritize your privacy and security. Umoja B2B uses industry-standard encryption and performs regular data backups to ensure that your information is safe. Your data will never be shared with third parties without your consent. For more details, you can view our full Privacy Policy here.",
   },
   {
-    question: "How long does it take to set up my online store?",
-    answer: "Once we have all your business information and products, we can set up your store within 3-5 business days. This includes your custom domain, product uploads, and payment integration."
+    question: "Can I manage my business across multiple devices?",
+    answer:
+      "Absolutely! Umoja B2B is accessible on both desktop and mobile devices, allowing you to manage your inventory, track orders, and update your product listings from anywhere, anytime.",
   },
   {
-    question: "What payment methods are supported?",
-    answer: "We support various payment methods including mobile money, bank transfers, and major credit cards. We can also integrate with popular local payment providers in your region."
+    question: "What if I need help setting up my business on Umoja B2B?",
+    answer:
+      "We're here to support you. Our team offers onboarding assistance to get your business set up quickly and efficiently. Plus, our Help Center has step-by-step guides and tutorials, or you can reach out to our support team for personalized help.",
   },
   {
-    question: "Do you provide ongoing support?",
-    answer: "Yes, our team is available via email and chat to help you with any questions or issues. We also provide regular training sessions to help you make the most of your online store."
+    question: "Are there any fees for listing my products on Umoja B2B?",
+    answer:
+      "It's free to list your products on Umoja B2B! We do charge a small transaction fee on sales made through the platform to cover operational costs and maintain our services. Contact our team for a detailed breakdown of fees.",
   },
   {
-    question: "Can I upgrade my package later?",
-    answer: "Yes, you can upgrade your package at any time to add more products or access additional features. Contact our support team for assistance with upgrades."
-  }
+    question: "What payment methods are supported on Umoja B2B?",
+    answer:
+      "We support a variety of payment options tailored to African businesses, including mobile money, bank transfers, and traditional credit and debit card payments. We're continuously working to add more payment methods for convenience and security.",
+  },
+  {
+    question: "How can Umoja B2B help grow my business?",
+    answer:
+      "We combine AI-driven cataloging with a powerful network of influencers to boost visibility for your products, reaching new customers and increasing sales. Plus, our tools help streamline your inventory management and customer service, so you can focus on growing your brand.",
+  },
+  {
+    question: "What happens if I decide to leave Umoja B2B?",
+    answer:
+      "We'd hate to see you go, but you're free to close your account at any time. Your data remains secure, and we provide a simple process for exporting any information you may need. Reach out to support if you need assistance with this process.",
+  },
 ];
 
 export function Faq({ id }: { id?: string }) {
@@ -38,8 +52,10 @@ export function Faq({ id }: { id?: string }) {
       <div className="container mx-auto px-4">
         <FadeIn>
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-[#cd9b01] to-[#fdc412] bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-lg text-[#87690c] max-w-2xl mx-auto">
               Find answers to common questions about our services
             </p>
           </div>
@@ -47,13 +63,17 @@ export function Faq({ id }: { id?: string }) {
 
         <div className="max-w-3xl mx-auto">
           <FadeIn delay={0.2}>
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion type="single" collapsible className="w-full space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="border border-[#ffe289] rounded-xl bg-white shadow-lg shadow-[#fef9e8] hover:shadow-xl hover:shadow-[#fff0c2] transition-all duration-300"
+                >
+                  <AccordionTrigger className="text-left px-6 py-4 text-[#725a11] hover:text-[#cd9b01] hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
+                  <AccordionContent className="text-[#87690c] px-6 pb-4">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>

@@ -2,104 +2,131 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { FadeIn } from "@/components/animations/FadeIn";
-import { CheckCircle } from "lucide-react";
+import { CheckIcon, SparklesIcon, StarIcon, RocketLaunchIcon, TrophyIcon, FireIcon, BoltIcon, HeartIcon, GiftIcon } from "@heroicons/react/20/solid";
 
-const plans = [
+const tiers = [
   {
-    name: "Starter",
-    price: "249.99",
-    monthly: "9.99",
-    description: "Perfect for small businesses starting their online journey",
+    name: "Basic Branding",
+    id: "tier-basic",
+    mainIcon: <SparklesIcon className="h-8 w-8 text-[#fdc412]" />,
+    description: "Essential branding package for new businesses.",
+    setupPrice: "$149.99",
+    monthlyPrice: "$4.99",
+    href: "#",
     features: [
-      "Logo & Brand Kit",
-      "Business Cards",
-      "Landing Page",
-      "Basic SEO",
-      "10 Product Store",
-      "Email Support"
-    ]
+      {icon: <GiftIcon className="h-4 w-4" />, text: "Simple Logo Design"},
+      {icon: <HeartIcon className="h-4 w-4" />, text: "Basic Business Cards"},
+      {icon: <BoltIcon className="h-4 w-4" />, text: "Domain Registration"},
+      {icon: <FireIcon className="h-4 w-4" />, text: "1-Page Website"},
+      {icon: <StarIcon className="h-4 w-4" />, text: "Basic SEO Setup"},
+      {icon: <TrophyIcon className="h-4 w-4" />, text: "Email Support"}
+    ],
+    featured: false
   },
   {
     name: "Professional",
-    price: "499.99",
-    monthly: "19.99",
-    description: "Ideal for growing businesses with more products",
+    id: "tier-professional",
+    mainIcon: <RocketLaunchIcon className="h-8 w-8 text-[#fdc412]" />,
+    description: "Complete branding and online presence solution.",
+    setupPrice: "$249.99",
+    monthlyPrice: "$9.99",
+    href: "#",
     features: [
-      "Everything in Starter",
-      "30 Product Store",
-      "Advanced SEO",
-      "Social Media Kit",
-      "Priority Support",
-      "Marketing Consultation"
+      {icon: <GiftIcon className="h-4 w-4" />, text: "Premium Logo Package"},
+      {icon: <HeartIcon className="h-4 w-4" />, text: "Premium Business Cards"},
+      {icon: <BoltIcon className="h-4 w-4" />, text: "Full Brand Toolkit"},
+      {icon: <FireIcon className="h-4 w-4" />, text: "Multi-Page Website"},
+      {icon: <StarIcon className="h-4 w-4" />, text: "Advanced SEO Package"},
+      {icon: <TrophyIcon className="h-4 w-4" />, text: "Online Store Setup"},
+      {icon: <SparklesIcon className="h-4 w-4" />, text: "Priority Support"}
     ],
-    popular: true
+    featured: true
   },
   {
     name: "Enterprise",
-    price: "999.99",
-    monthly: "49.99",
-    description: "For established businesses needing full-scale solutions",
+    id: "tier-enterprise",
+    mainIcon: <TrophyIcon className="h-8 w-8 text-[#fdc412]" />,
+    description: "Custom branding and e-commerce solutions for large businesses.",
+    setupPrice: "Contact us",
+    monthlyPrice: "Custom",
+    href: "#",
     features: [
-      "Everything in Professional",
-      "Unlimited Products",
-      "Custom Features",
-      "Dedicated Support",
-      "Monthly Strategy Calls",
-      "Advanced Analytics"
-    ]
+      {icon: <StarIcon className="h-4 w-4" />, text: "Custom Brand Strategy"},
+      {icon: <BoltIcon className="h-4 w-4" />, text: "Unlimited Design Revisions"},
+      {icon: <FireIcon className="h-4 w-4" />, text: "Advanced E-commerce Features"},
+      {icon: <HeartIcon className="h-4 w-4" />, text: "Custom Web Development"},
+      {icon: <GiftIcon className="h-4 w-4" />, text: "SEO & Marketing Strategy"},
+      {icon: <SparklesIcon className="h-4 w-4" />, text: "Analytics Dashboard"},
+      {icon: <RocketLaunchIcon className="h-4 w-4" />, text: "Dedicated Account Manager"}
+    ],
+    featured: false
   }
 ];
 
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
+}
+
 export function Pricing({ id }: { id?: string }) {
   return (
-    <section id={id} className="py-12 sm:py-24 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <FadeIn>
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">Choose Your Plan</h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Select the perfect package for your business needs
+    <div id={id} className="relative isolate bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="text-base/7 font-semibold text-[#cd9b01]">Build Your Brand</h2>
+        <p className="mt-2 text-balance text-5xl font-semibold tracking-tight text-[#725a11] sm:text-6xl">
+          Branding Solutions for Every Business
+        </p>
+      </div>
+      <p className="mx-auto mt-6 max-w-2xl text-pretty text-center text-lg font-medium text-[#87690c] sm:text-xl/8">
+        From logos to complete online stores, we help you build a strong brand presence that grows with your business.
+      </p>
+      <div className="mx-auto mt-16 grid max-w-lg grid-cols-1 items-center gap-y-6 sm:mt-20 sm:gap-y-0 lg:max-w-6xl lg:grid-cols-3">
+        {tiers.map((tier) => (
+          <div
+            key={tier.id}
+            className={classNames(
+              tier.featured ? 'relative bg-white shadow-2xl scale-105 z-10 border-2 border-[#fdc412]' : ' sm:mx-4 lg:mx-0',
+              'rounded-3xl p-8 ring-1 ring-[#ffe289]/20 sm:p-10',
+              tier.featured ? 'transition-transform hover:scale-110 focus:scale-110' : ''
+            )}
+          >
+            <div className="flex flex-col items-center mb-6">
+              {tier.mainIcon}
+              <h3 id={tier.id} className="text-2xl font-semibold text-[#cd9b01] mt-2">
+                {tier.name}
+              </h3>
+            </div>
+            <div className="text-center">
+              <p className="text-4xl font-bold text-[#725a11]">{tier.setupPrice}</p>
+              <p className="text-sm text-[#87690c]">one-time setup</p>
+              <p className="mt-2 text-lg font-semibold text-[#cd9b01]">
+                + {tier.monthlyPrice}/month
+              </p>
+            </div>
+            <p className="mt-6 text-base/7 text-center text-[#87690c]">{tier.description}</p>
+            <ul role="list" className="mt-8 space-y-3">
+              {tier.features.map((feature) => (
+                <li key={feature.text} className="flex items-center gap-3">
+                  <span className="text-[#fdc412]">{feature.icon}</span>
+                  <span className="text-sm text-[#a37d05]">{feature.text}</span>
+                </li>
+              ))}
+            </ul>
+            <Button 
+              className={classNames(
+                tier.featured
+                  ? 'bg-[#fdc412] text-white hover:bg-[#cd9b01]'
+                  : 'bg-white text-[#cd9b01] ring-1 ring-inset ring-[#fdc412] hover:bg-[#fff0c2] hover:text-[#a37d05]',
+                'mt-8 w-full rounded-full sm:mt-10'
+              )}
+            >
+              Get Started
+            </Button>
+            <p className="mt-4 text-xs text-center text-[#87690c]">
+              Satisfaction guaranteed or your money back
             </p>
           </div>
-        </FadeIn>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
-          {plans.map((plan) => (
-            <FadeIn key={plan.name}>
-              <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.2 }}>
-                <Card className={`p-4 sm:p-6 rounded-3xl relative h-full flex flex-col ${plan.popular ? 'border-primary' : ''}`}>
-                  {plan.popular && (
-                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-xs sm:text-sm font-medium whitespace-nowrap">
-                      Most Popular
-                    </span>
-                  )}
-                  <div className="text-center mb-6">
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">{plan.name}</h3>
-                    <p className="text-muted-foreground text-xs sm:text-sm mb-4">{plan.description}</p>
-                    <div className="mb-4">
-                      <span className="text-2xl sm:text-4xl font-bold">${plan.price}</span>
-                      <span className="text-sm text-muted-foreground">+ ${plan.monthly}/mo</span>
-                    </div>
-                  </div>
-                  <ul className="space-y-3 mb-6 flex-grow">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-center gap-2">
-                        <CheckCircle className="text-primary h-4 sm:h-5 w-4 sm:w-5 flex-shrink-0" />
-                        <span className="text-xs sm:text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button className="w-full rounded-3xl mt-auto" variant={plan.popular ? "default" : "outline"}>
-                    Get Started
-                  </Button>
-                </Card>
-              </motion.div>
-            </FadeIn>
-          ))}
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

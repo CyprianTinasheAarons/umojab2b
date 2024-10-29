@@ -55,20 +55,20 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
     >
       <div className="flex flex-row items-center gap-3">
         <div
-          className="flex size-10 items-center justify-center rounded-2xl"
+          className="flex size-8 sm:size-10 items-center justify-center rounded-2xl"
           style={{
             backgroundColor: color,
           }}
         >
-          <span className="text-lg">{icon}</span>
+          <span className="text-base sm:text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium">
-            <span className="text-sm sm:text-lg">{name}</span>
+          <figcaption className="flex flex-row items-center whitespace-pre text-sm sm:text-lg font-medium">
+            <span>{name}</span>
             <span className="mx-1">·</span>
-            <span className="text-xs text-gray-500">{time}</span>
+            <span className="text-[10px] sm:text-xs text-gray-500">{time}</span>
           </figcaption>
-          <p className="text-sm font-normal text-gray-600">{description}</p>
+          <p className="text-xs sm:text-sm font-normal text-gray-600">{description}</p>
         </div>
       </div>
     </figure>
@@ -89,7 +89,6 @@ export function Notifications({ className }: { className?: string }) {
         currentScrollY < lastScrollY.current &&
         currentIndex >= notifications.length
       ) {
-        // User scrolled up, reset index to show notifications again
         setCurrentIndex(0);
       }
       lastScrollY.current = currentScrollY;
@@ -105,7 +104,6 @@ export function Notifications({ className }: { className?: string }) {
     const showNotification = () => {
       setCurrentNotification(notifications[currentIndex]);
 
-      // Hide after 3 seconds
       setTimeout(() => {
         setCurrentNotification(null);
         setCurrentIndex((prev) => prev + 1);
@@ -121,7 +119,7 @@ export function Notifications({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed top-20 right-4 z-50 flex h-auto w-[400px] flex-col p-4 overflow-hidden rounded-lg bg-transparent",
+        "fixed top-20 right-2 sm:right-4 z-50 flex h-auto w-[280px] sm:w-[400px] flex-col p-2 sm:p-4 overflow-hidden rounded-lg bg-transparent",
         className
       )}
     >
