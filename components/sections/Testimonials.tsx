@@ -1,69 +1,107 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
-import { FadeIn } from "@/components/animations/FadeIn";
-import Image from "next/image";
+import { cn } from "@/lib/utils";
+import Marquee from "@/components/ui/marquee";
 
-const testimonials = [
+const reviews = [
   {
-    quote: "Umoja has helped me grow my sales by 30% in just 3 months! I can now focus on quality and production while they handle the rest.",
-    author: "Tariro M.",
-    role: "Local Artisan",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&q=80"
+    name: "Aisha",
+    username: "@aisha_africa",
+    body: "Umoja has transformed my business. I've gained so many new customers, and managing orders is a breeze!",
+    img: "https://avatar.vercel.sh/aisha",
   },
   {
-    quote: "The complete package was exactly what my business needed. From branding to online sales, everything was handled professionally.",
-    author: "Samuel K.",
-    role: "Restaurant Owner",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&q=80"
+    name: "Kofi",
+    username: "@kofi_trader",
+    body: "As a small business owner, Umoja helped me scale in ways I never thought possible. Fantastic platform!",
+    img: "https://avatar.vercel.sh/kofi",
   },
   {
-    quote: "Thanks to Umoja, my handmade products are now reaching customers across Africa. The platform is easy to use and the support is amazing.",
-    author: "Grace N.",
-    role: "Craft Business Owner",
-    image: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=100&h=100&q=80"
-  }
+    name: "Nia",
+    username: "@nia_designs",
+    body: "The cataloging feature is a game-changer. My products now look as professional as the big brands.",
+    img: "https://avatar.vercel.sh/nia",
+  },
+  {
+    name: "Kwame",
+    username: "@kwame_online",
+    body: "Umoja has made handling inventory and customer orders so simple. I finally have time to grow my business!",
+    img: "https://avatar.vercel.sh/kwame",
+  },
+  {
+    name: "Fatima",
+    username: "@fatima_market",
+    body: "I trust Umoja to handle all my online sales. Their system is reliable, and my customers are happy!",
+    img: "https://avatar.vercel.sh/fatima",
+  },
+  {
+    name: "Esi",
+    username: "@esi_ghana",
+    body: "Finally, an e-commerce solution that understands African markets. Umoja has been a real blessing.",
+    img: "https://avatar.vercel.sh/esi",
+  },
 ];
 
-export function Testimonials({ id }: { id?: string }) {
-  return (
-    <section id={id} className="py-24 bg-primary/5">
-      <div className="container mx-auto px-4">
-        <FadeIn>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">Success Stories</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              See how businesses like yours are thriving with Umoja
-            </p>
-          </div>
-        </FadeIn>
+const firstRow = reviews.slice(0, reviews.length / 2);
+const secondRow = reviews.slice(reviews.length / 2);
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <FadeIn key={index} delay={index * 0.2}>
-              <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
-                <Card className="p-6 h-full flex flex-col">
-                  <div className="flex items-center mb-4">
-                    <Image
-                      src={testimonial.image}
-                      alt={testimonial.author}
-                      width={50}
-                      height={50}
-                      className="rounded-full"
-                    />
-                    <div className="ml-4">
-                      <h3 className="font-semibold">{testimonial.author}</h3>
-                      <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                    </div>
-                  </div>
-                  <blockquote className="text-muted-foreground flex-grow">
-                    "{testimonial.quote}"
-                  </blockquote>
-                </Card>
-              </motion.div>
-            </FadeIn>
-          ))}
+const ReviewCard = ({
+  img,
+  name,
+  username,
+  body,
+}: {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}) => {
+  return (
+    <figure
+      className={cn(
+        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        // light styles
+        "border-[#433405]/[.1] bg-[#433405]/[.01] hover:bg-[#433405]/[.05]",
+        // dark styles
+        "dark:border-[#fef9e8]/[.1] dark:bg-[#fef9e8]/[.10] dark:hover:bg-[#fef9e8]/[.15]"
+      )}
+    >
+      <div className="flex flex-row items-center gap-2">
+        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <div className="flex flex-col">
+          <figcaption className="text-sm font-medium dark:text-[#fef9e8]">
+            {name}
+          </figcaption>
+          <p className="text-xs font-medium dark:text-[#fef9e8]/40">
+            {username}
+          </p>
+        </div>
+      </div>
+      <blockquote className="mt-2 text-sm">{body}</blockquote>
+    </figure>
+  );
+};
+
+export function Testimonials({ id }: { id: string }) {
+  return (
+    <section id={id} className="py-24">
+      <div className=" px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold mb-4">What Our Clients Say</h2>
+        </div>
+        <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden ">
+          <Marquee pauseOnHover className="[--duration:20s]">
+            {firstRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+          <Marquee reverse pauseOnHover className="[--duration:20s]">
+            {secondRow.map((review) => (
+              <ReviewCard key={review.username} {...review} />
+            ))}
+          </Marquee>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[#FAF8F4] dark:from-[#171717]"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#FAF8F4] dark:from-[#171717]"></div>
         </div>
       </div>
     </section>

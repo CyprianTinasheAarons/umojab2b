@@ -107,7 +107,7 @@ export function Navigation() {
                     {item.label}
                   </a>
                 ))}
-                <Button className="w-full bg-primary hover:bg-primary/90 mt-4">
+                <Button className="w-full bg-primary hover:bg-primary/90 mt-4 py-6 text-lg shadow-[0_0_15px] shadow-primary/50 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_25px] hover:shadow-primary/50">
                   Get Started
                 </Button>
               </div>

@@ -1,83 +1,75 @@
-"use client";
+import { MessageCircle, Bug, Monitor } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { GlassCard } from "@/components/ui/glass-card";
-import { FadeIn } from "@/components/animations/FadeIn";
-import Image from "next/image";
-
-const helpTopics = [
-  {
-    title: "Getting Started",
-    description:
-      "Learn how to set up your account and start using our services.",
-  },
-  {
-    title: "Account Management",
-    description:
-      "Manage your account settings, subscriptions, and billing information.",
-  },
-  {
-    title: "Using Our Services",
-    description:
-      "Detailed guides on how to use our various services and features.",
-  },
-  {
-    title: "Troubleshooting",
-    description:
-      "Find solutions to common issues and get help with technical problems.",
-  },
-  {
-    title: "Contact Support",
-    description: "Reach out to our support team for personalized assistance.",
-  },
-];
-
-export default function Help() {
+export default function HelpPage() {
   return (
-    <main className="min-h-screen pt-16">
-      <section className="py-12 sm:py-24 bg-background relative">
-        <div className="container mx-auto px-4 relative">
-          <FadeIn>
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-                How Can We Help You?
-              </h2>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-                Find answers to your questions and get the support you need.
-              </p>
-            </div>
-          </FadeIn>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {helpTopics.map((topic, index) => (
-              <FadeIn key={index} delay={index * 0.2}>
-                <GlassCard className={`p-6 sm:p-8 h-full`} hover>
-                  <motion.div
-                    initial={{ scale: 1 }}
-                    whileHover={{ scale: 1.1 }}
-                    className="mb-6 text-primary"
-                  >
-                    <Image
-                      src={`/icons/help/${topic.title
-                        .toLowerCase()
-                        .replace(/ /g, "-")}.svg`}
-                      alt={topic.title}
-                      width={40}
-                      height={40}
-                    />
-                  </motion.div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-3">
-                    {topic.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground">
-                    {topic.description}
-                  </p>
-                </GlassCard>
-              </FadeIn>
-            ))}
+    <div className="isolate  px-6 py-24 sm:py-32 lg:px-8">
+      <div className="mx-auto max-w-2xl sm:text-center">
+        <h2 className="text-balance text-4xl font-semibold tracking-tight text-[#433405] sm:text-5xl">
+          How can we help?
+        </h2>
+        <p className="mt-2 text-lg/8 text-[#725a11]">
+          Get support from our team through any of these channels
+        </p>
+      </div>
+      <div className="mx-auto mt-20 max-w-lg space-y-16">
+        <div className="flex gap-x-6">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdc412]">
+            <MessageCircle className="h-6 w-6 text-[#433405]" />
+          </div>
+          <div>
+            <h3 className="text-base/7 font-semibold text-[#433405]">
+              Chat with Sales
+            </h3>
+            <p className="mt-2 text-base/7 text-[#725a11]">
+              Learn more about our business packages and how we can help your
+              business grow online. Our sales team is ready to assist.
+            </p>
+            <p className="mt-4 text-sm/6 font-semibold">
+              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
+                Start a conversation <span aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
           </div>
         </div>
-      </section>
-    </main>
+        <div className="flex gap-x-6">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdc412]">
+            <Bug className="h-6 w-6 text-[#433405]" />
+          </div>
+          <div>
+            <h3 className="text-base/7 font-semibold text-[#433405]">
+              Report an Issue
+            </h3>
+            <p className="mt-2 text-base/7 text-[#725a11]">
+              Found something not working as expected? Let us know and
+              we&apos;ll fix it right away to ensure smooth operations.
+            </p>
+            <p className="mt-4 text-sm/6 font-semibold">
+              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
+                Submit a report <span aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-x-6">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#fdc412]">
+            <Monitor className="h-6 w-6 text-[#433405]" />
+          </div>
+          <div>
+            <h3 className="text-base/7 font-semibold text-[#433405]">
+              Technical Support
+            </h3>
+            <p className="mt-2 text-base/7 text-[#725a11]">
+              Need help with your website or online store? Our technical team is
+              available 24/7 to assist you.
+            </p>
+            <p className="mt-4 text-sm/6 font-semibold">
+              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
+                Get support <span aria-hidden="true">&rarr;</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

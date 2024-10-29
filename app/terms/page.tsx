@@ -1,84 +1,97 @@
 "use client";
 
-import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
-
-const contactDetails = [
-  {
-    label: "hello@umojab2b.com",
-    href: "mailto:hello@umojab2b.com",
-    icon: <Mail className="h-6 w-6" />,
-  },
-  {
-    label: "+263 777 150 345",
-    href: "tel:+263777150345",
-    icon: <Phone className="h-6 w-6" />,
-  },
-  {
-    label: "+263 771 535 326",
-    href: "tel:+263771535326",
-    icon: <Phone className="h-6 w-6" />,
-  },
-];
+import { FadeIn } from "@/components/animations/FadeIn";
 
 export default function Terms() {
   return (
-    <main className="min-h-screen pt-16">
-      <section className="py-12 sm:py-24 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
-              Terms and Conditions
+    <div className="min-h-screen ">
+      <div className="container mx-auto px-4 py-24">
+        <FadeIn>
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-[#433405] mb-12">
+              Terms of Service
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-              Please read these terms and conditions carefully before using our
-              services.
-            </p>
-          </div>
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Acceptance of Terms
+
+            <div className="prose prose-lg prose-yellow max-w-none">
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                1. Terms
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                By accessing and using our services, you accept and agree to be
-                bound by the terms and provision of this agreement.
+              <p className="text-[#87690c] mb-6">
+                By accessing this Website, you are agreeing to be bound by these
+                Website Terms and Conditions of Use and agree that you are
+                responsible for the agreement with any applicable local laws.
               </p>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Modification of Terms
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                2. Use License
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                We reserve the right to modify these terms at any time. You
-                should check this page regularly to take notice of any changes
-                we may have made to the Terms of Service.
+              <p className="text-[#87690c] mb-6">
+                Permission is granted to temporarily download one copy of the
+                materials (information or software) on Umoja&apos;s Website for
+                personal, non-commercial transitory viewing only.
               </p>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Contact Information
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                3. Disclaimer
               </h2>
-              <ul className="space-y-4">
-                {contactDetails.map((contact) => (
-                  <li
-                    key={contact.label}
-                    className="flex items-center space-x-4"
-                  >
-                    {contact.icon}
-                    <a
-                      href={contact.href}
-                      className="text-base sm:text-lg text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {contact.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-[#87690c] mb-6">
+                All the materials on Umoja&apos;s Website are provided &quot;as
+                is&quot;. Umoja makes no warranties, may it be expressed or
+                implied, therefore negates all other warranties.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                4. Limitations
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                Umoja or its suppliers will not be held accountable for any
+                damages that will arise with the use or inability to use the
+                materials on Umoja&apos;s Website.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                5. Revisions
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                The materials appearing on Umoja&apos;s Website may include
+                technical, typographical, or photographic errors. Umoja will not
+                promise that any of the materials in this Website are accurate,
+                complete, or current.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                6. Links
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                Umoja has not reviewed all of the sites linked to its Website
+                and is not responsible for the contents of any such linked site.
+                The presence of any link does not imply endorsement by Umoja of
+                the site.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                7. Site Terms of Use Modifications
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                Umoja may revise these Terms of Use for its Website at any time
+                without prior notice. By using this Website, you are agreeing to
+                be bound by the current version of these Terms and Conditions of
+                Use.
+              </p>
+
+              <div className="mt-12 p-6 bg-[#fff0c2] rounded-lg border border-[#ffd245]">
+                <h3 className="text-xl font-semibold text-[#a37d05] mb-3">
+                  Questions?
+                </h3>
+                <p className="text-[#cd9b01]">
+                  If you have any questions about these Terms of Service, please
+                  contact us at support@umojab2b.com
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </FadeIn>
+      </div>
+    </div>
   );
 }

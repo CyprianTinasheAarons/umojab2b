@@ -1,86 +1,94 @@
 "use client";
 
-import { Mail, Phone } from "lucide-react";
-import Image from "next/image";
-
-const contactDetails = [
-  {
-    label: "hello@umojab2b.com",
-    href: "mailto:hello@umojab2b.com",
-    icon: <Mail className="h-6 w-6" />,
-  },
-  {
-    label: "+263 777 150 345",
-    href: "tel:+263777150345",
-    icon: <Phone className="h-6 w-6" />,
-  },
-  {
-    label: "+263 771 535 326",
-    href: "tel:+263771535326",
-    icon: <Phone className="h-6 w-6" />,
-  },
-];
+import { FadeIn } from "@/components/animations/FadeIn";
 
 export default function Privacy() {
   return (
-    <main className="min-h-screen pt-16">
-      <section className="py-12 sm:py-24 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 sm:mb-16">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">
+    <div className="min-h-screen ">
+      <div className="container mx-auto px-4 py-24">
+        <FadeIn>
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-bold text-[#433405] mb-12">
               Privacy Policy
             </h1>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-4">
-              Your privacy is important to us. This privacy policy explains how
-              we collect, use, and protect your information.
-            </p>
-          </div>
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Information Collection
+
+            <div className="prose prose-lg prose-yellow max-w-none">
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                1. Information We Collect
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground">
-                We collect information that you provide to us directly, such as
-                when you create an account, update your profile, or make a
-                purchase. We also collect information automatically, such as
-                your IP address and browsing behavior.
+              <p className="text-[#87690c] mb-6">
+                We collect information that you provide directly to us,
+                including your name, email address, and any other information
+                you choose to provide when using our services.
               </p>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Use of Information
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                2. How We Use Your Information
               </h2>
-              <p className="text-base sm:text-lg text-muted-foreground">
+              <p className="text-[#87690c] mb-6">
                 We use the information we collect to provide, maintain, and
-                improve our services, to communicate with you, and to protect
-                our users.
+                improve our services, communicate with you, and protect our
+                users and services.
               </p>
-            </div>
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
-                Contact Us
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                3. Information Sharing
               </h2>
-              <ul className="space-y-4">
-                {contactDetails.map((contact) => (
-                  <li
-                    key={contact.label}
-                    className="flex items-center space-x-4"
-                  >
-                    {contact.icon}
-                    <a
-                      href={contact.href}
-                      className="text-base sm:text-lg text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      {contact.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-[#87690c] mb-6">
+                We do not sell or rent your personal information to third
+                parties. We may share your information only in circumstances
+                described in this policy.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                4. Data Security
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                We implement appropriate security measures to protect your
+                personal information against unauthorized access, alteration,
+                disclosure, or destruction.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                5. Cookies
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                We use cookies and similar tracking technologies to track
+                activity on our service and hold certain information to improve
+                your experience.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                6. Your Rights
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                You have the right to access, update, or delete your personal
+                information. You can also opt out of receiving promotional
+                communications from us.
+              </p>
+
+              <h2 className="text-2xl font-semibold text-[#725a11] mt-8 mb-4">
+                7. Changes to This Policy
+              </h2>
+              <p className="text-[#87690c] mb-6">
+                We may update our Privacy Policy from time to time. We will
+                notify you of any changes by posting the new Privacy Policy on
+                this page.
+              </p>
+
+              <div className="mt-12 p-6 bg-[#fff0c2] rounded-lg border border-[#ffd245]">
+                <h3 className="text-xl font-semibold text-[#a37d05] mb-3">
+                  Contact Us
+                </h3>
+                <p className="text-[#cd9b01]">
+                  If you have any questions about this Privacy Policy, please
+                  contact us at support@umojab2b.com
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </FadeIn>
+      </div>
+    </div>
   );
 }

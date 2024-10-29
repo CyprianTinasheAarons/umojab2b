@@ -24,6 +24,12 @@
     --input: 20 5.9% 90%;
     --ring: 45 93% 47%;
     --radius: 0.75rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+    --bg-size: 400%;
   }
 
   .dark {
@@ -46,6 +52,12 @@
     --border: 12 6.5% 15.1%;
     --input: 12 6.5% 15.1%;
     --ring: 45 93% 47%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+
   }
 }
 
@@ -59,3 +71,8 @@
 }
 
 /* Rest of your existing CSS remains the same */
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: var(--bg-size) 50%; }
+}
