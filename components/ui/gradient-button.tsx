@@ -2,8 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Button } from "./button";
-import { ButtonProps } from "@radix-ui/react-button";
+import { Button, ButtonProps } from "./button";
 
 interface GradientButtonProps extends ButtonProps {
   children: React.ReactNode;

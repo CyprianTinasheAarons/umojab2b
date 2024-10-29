@@ -1,10 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps, MotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { type ButtonHTMLAttributes } from "react";
+import { type ReactNode } from "react";
 
-interface HeroButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+interface HeroButtonProps
+  extends Omit<HTMLMotionProps<"button">, keyof ButtonHTMLAttributes<HTMLButtonElement>>,
+    ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode;
   variant?: "primary" | "secondary";
 }
 
@@ -13,9 +17,10 @@ export function HeroButton({
   className,
   variant = "primary",
   ...props
-}: HeroButtonProps) {
+}: HeroButtonProps & MotionProps) {
   return (
     <motion.button
+    
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       className={cn(

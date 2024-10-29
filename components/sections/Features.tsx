@@ -9,7 +9,7 @@ import Image from "next/image";
 const features = [
   {
     icon: <Palette className="h-8 w-8" />,
-    title: "Brand Identity Package",
+    title: "Brand Identity Package", 
     description: "Professional logo, business cards, letterhead, and complete brand toolkit inspired by African heritage"
   },
   {
@@ -53,7 +53,7 @@ export function Features({ id }: { id?: string }) {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {features.map((feature, index) => (
             <FadeIn key={index} delay={index * 0.2}>
-              <GlassCard className="p-6 sm:p-8 h-full" hover>
+              <GlassCard className={`p-6 sm:p-8 h-full`} hover>
                 <motion.div
                   initial={{ scale: 1 }}
                   whileHover={{ scale: 1.1 }}

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { motion } from "framer-motion"; // Add framer-motion import
 
 const navItems = [
   { label: "Features", href: "#features" },
