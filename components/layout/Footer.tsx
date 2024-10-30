@@ -129,6 +129,8 @@ export function Footer() {
                     href={social.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                     aria-label={social.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {social.icon}
                   </a>
