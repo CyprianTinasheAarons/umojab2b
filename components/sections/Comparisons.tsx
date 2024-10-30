@@ -152,7 +152,7 @@ const comparisons = [
 
 export function Comparisons({ id }: { id: string }) {
   return (
-    <section id={id} className=" py-24 sm:py-32">
+    <section id={id} className="hidden sm:block py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-[#a16107]">
