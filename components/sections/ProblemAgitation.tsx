@@ -53,7 +53,7 @@ export function ProblemAgitation({ id }: { id?: string }) {
               />
             </div>
           </div>
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 hidden md:block">
             {problems.map((problem, index) => {
               const angle = (index * 2 * Math.PI) / problems.length;
               const radius =
@@ -104,6 +104,17 @@ export function ProblemAgitation({ id }: { id?: string }) {
               );
             })}
           </div>
+        <div className="flex flex-col gap-4 md:hidden mt-8">
+          {problems.map((problem, index) => (
+            <Card key={index} className="p-4 backdrop-blur-sm bg-background/80 relative">
+              <div className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1">
+                <X className="text-white w-4 h-4" />
+              </div>
+              <h3 className="text-sm font-semibold mb-2">{problem.title}</h3>
+              <p className="text-xs text-muted-foreground">{problem.description}</p>
+            </Card>
+          ))}
+        </div>
         </div>
       </div>
     </section>
