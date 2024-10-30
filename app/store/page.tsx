@@ -1,10 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronDown, Clock, Info, Star } from "lucide-react";
+import { Check, Clock } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import emailjs from '@emailjs/browser';
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -51,9 +52,29 @@ export default function Component() {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const form = useForm<FormData>();
 
-  const onSubmit = (data: FormData) => {
-    console.log(data);
-    setShowConfirmation(true);
+  const onSubmit = async (data: FormData) => {
+    try {
+      await emailjs.send(
+        "service_8197xxj", // Replace with your EmailJS service ID
+        "template_2eruane", // Replace with your EmailJS template ID
+        {
+          from_name: data.fullName,
+          from_email: data.email,
+          phone: data.phone,
+          business_name: data.businessName,
+          business_type: data.businessType,
+          products_range: data.productsRange,
+          online_presence: data.onlinePresence?.join(", "),
+          goals: data.goals,
+        },
+        "F3QxeQ5EZyrDJn0AQ" // Your public key
+      );
+      
+      setShowConfirmation(true);
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      // Optionally add error handling UI
+    }
   };
 
   return (
