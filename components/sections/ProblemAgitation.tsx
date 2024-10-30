@@ -12,7 +12,8 @@ const problems = [
   },
   {
     title: "High Costs of Going Digital",
-    description: "Traditional web development is expensive for small businesses",
+    description:
+      "Traditional web development is expensive for small businesses",
   },
   {
     title: "Complex Tools and Platforms",
@@ -52,11 +53,13 @@ export function ProblemAgitation({ id }: { id?: string }) {
               />
             </div>
           </div>
-
           <div className="absolute inset-0">
             {problems.map((problem, index) => {
               const angle = (index * 2 * Math.PI) / problems.length;
-              const radius = typeof window !== "undefined" && window.innerWidth < 768 ? 90 : 250;
+              const radius =
+                typeof window !== "undefined" && window.innerWidth < 768
+                  ? 90
+                  : 250;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
 
