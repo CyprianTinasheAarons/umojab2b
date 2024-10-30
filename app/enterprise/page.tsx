@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, ChevronDown, Clock, Info, Star } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
@@ -60,20 +60,20 @@ export default function Component() {
   const enterpriseFeatures = [
     {
       title: "Full ERP Integration",
-      description: "Seamlessly manage inventory, finances, and HR operations"
+      description: "Seamlessly manage inventory, finances, and HR operations",
     },
     {
       title: "Advanced E-commerce",
-      description: "AI-driven product cataloging with marketplace integration"
+      description: "AI-driven product cataloging with marketplace integration",
     },
     {
       title: "AI Automation Suite",
-      description: "Smart chatbots and agents for enhanced customer service"
+      description: "Smart chatbots and agents for enhanced customer service",
     },
     {
       title: "Complete Branding",
-      description: "Professional logos, guidelines, and creative toolkit"
-    }
+      description: "Professional logos, guidelines, and creative toolkit",
+    },
   ];
 
   return (
@@ -146,12 +146,14 @@ export default function Component() {
                 Take Your Business to the Next Level with Umoja Enterprise
               </h1>
               <p className="text-xl text-muted-foreground mb-4">
-                Fill out the form below to explore how our comprehensive solutions can support your growth.
+                Fill out the form below to explore how our comprehensive
+                solutions can support your growth.
               </p>
               <p className="text-muted-foreground">
-                Our Enterprise package is meticulously crafted for established businesses seeking to streamline operations,
-                enhance customer engagement, and scale sustainably. Let us help you transform your digital presence with
-                our enterprise-grade solutions.
+                Our Enterprise package is meticulously crafted for established
+                businesses seeking to streamline operations, enhance customer
+                engagement, and scale sustainably. Let us help you transform
+                your digital presence with our enterprise-grade solutions.
               </p>
             </div>
 
@@ -171,7 +173,9 @@ export default function Component() {
                         </div>
                         <div>
                           <h3 className="font-semibold">{feature.title}</h3>
-                          <p className="text-sm text-muted-foreground">{feature.description}</p>
+                          <p className="text-sm text-muted-foreground">
+                            {feature.description}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -254,10 +258,7 @@ export default function Component() {
                         <FormItem>
                           <FormLabel>Company Name</FormLabel>
                           <FormControl>
-                            <Input
-                              placeholder="Your Company Name"
-                              {...field}
-                            />
+                            <Input placeholder="Your Company Name" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -290,7 +291,7 @@ export default function Component() {
                                   "Healthcare",
                                   "Finance",
                                   "Education",
-                                  "Other"
+                                  "Other",
                                 ].map((type) => (
                                   <SelectItem
                                     key={type}
@@ -309,7 +310,9 @@ export default function Component() {
                       <FormField
                         control={form.control}
                         name="monthlyRevenue"
-                        rules={{ required: "Monthly revenue range is required" }}
+                        rules={{
+                          required: "Monthly revenue range is required",
+                        }}
                         render={({ field }) => (
                           <FormItem>
                             <FormLabel>Monthly Revenue Range</FormLabel>
@@ -327,7 +330,7 @@ export default function Component() {
                                   "$10k - $50k",
                                   "$50k - $100k",
                                   "$100k - $500k",
-                                  "$500k+"
+                                  "$500k+",
                                 ].map((range) => (
                                   <SelectItem key={range} value={range}>
                                     {range}
@@ -365,7 +368,9 @@ export default function Component() {
                       name="specificNeeds"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Specific Needs or Customizations</FormLabel>
+                          <FormLabel>
+                            Specific Needs or Customizations
+                          </FormLabel>
                           <FormControl>
                             <Textarea
                               placeholder="Tell us about any specific requirements or areas you'd like us to address..."
@@ -427,8 +432,8 @@ export default function Component() {
                     <h3 className="font-semibold">Enterprise Support</h3>
                   </div>
                   <p className="text-sm">
-                    Get priority access to our dedicated enterprise support team and
-                    personalized onboarding assistance.
+                    Get priority access to our dedicated enterprise support team
+                    and personalized onboarding assistance.
                   </p>
                 </CardContent>
               </Card>
@@ -443,8 +448,9 @@ export default function Component() {
           <DialogHeader>
             <DialogTitle>Thank You for Your Interest!</DialogTitle>
             <DialogDescription>
-              One of our enterprise solutions specialists will contact you within 24 hours
-              to discuss your business needs and how we can support your transformation journey.
+              One of our enterprise solutions specialists will contact you
+              within 24 hours to discuss your business needs and how we can
+              support your transformation journey.
             </DialogDescription>
           </DialogHeader>
           <div className="mt-4 flex justify-end">
