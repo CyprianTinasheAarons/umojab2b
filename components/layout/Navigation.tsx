@@ -6,20 +6,22 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Features", href: "#features" },
   { label: "Package", href: "#package" },
   { label: "Benefits", href: "#benefits" },
   { label: "Contact", href: "/help" },
-  { label: "Marketplace", href: "https://marketplace.umojab2b.com" }, // Added marketplace link
+  { label: "Marketplace", href: "https://marketplace.umojab2b.com" },
 ];
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -29,8 +31,14 @@ export function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = () => {
+  const handleNavClick = (href: string) => {
     setIsOpen(false);
+
+    if (href.startsWith("#") && pathname !== "/") {
+      router.push(`/${href}`);
+    } else {
+      router.push(href);
+    }
   };
 
   return (
@@ -59,14 +67,17 @@ export function Navigation() {
                 key={item.label}
                 href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                onClick={handleNavClick}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick(item.href);
+                }}
               >
                 {item.label}
               </a>
             ))}
             <Button
               className="bg-primary hover:bg-primary/90"
-              onClick={() => router.push("https://store.umojab2b.com")}
+              onClick={() => router.push("/store")}
             >
               Get Started
             </Button>
@@ -106,7 +117,10 @@ export function Navigation() {
                     key={item.label}
                     href={item.href}
                     className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
-                    onClick={handleNavClick}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.href);
+                    }}
                   >
                     {item.label}
                   </a>
