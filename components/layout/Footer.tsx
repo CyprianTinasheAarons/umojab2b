@@ -101,7 +101,7 @@ export function Footer() {
         Book a Demo
       </button>
 
-      <footer className="bg-muted/30">
+      <footer className="bg-muted/30 border-t">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Brand Column */}

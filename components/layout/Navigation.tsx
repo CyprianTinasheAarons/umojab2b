@@ -10,7 +10,7 @@ import { useRouter, usePathname } from "next/navigation";
 
 const navItems = [
   { label: "Features", href: "#features" },
-  { label: "Package", href: "#package" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Benefits", href: "#benefits" },
   { label: "Contact", href: "/help" },
   { label: "Marketplace", href: "https://marketplace.umojab2b.com" },
