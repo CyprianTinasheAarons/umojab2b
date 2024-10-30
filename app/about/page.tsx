@@ -2,10 +2,10 @@
 
 export default function AboutPage() {
   return (
-    <div className="bg-[#fef9e8]">
+    <div className="bg-[#fef9e8] ">
       <main className="isolate">
         {/* Hero section */}
-        <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-[#fef9e8] to-[#fff0c2] pt-14">
+        <div className="relative isolate -z-10 overflow-hidden bg-gradient-to-b from-[#fef9e8] to-[#fff0c2] pt-14 min-h-screen">
           <div
             aria-hidden="true"
             className="absolute inset-y-0 right-1/2 -z-10 -mr-96 w-[200%] origin-top-right skew-x-[-30deg] bg-white shadow-xl shadow-[#fdc412]/10 ring-1 ring-[#ffe289] sm:-mr-80 lg:-mr-96"

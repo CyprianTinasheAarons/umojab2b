@@ -12,7 +12,7 @@ const navItems = [
   { label: "Features", href: "#features" },
   { label: "Package", href: "#package" },
   { label: "Benefits", href: "#benefits" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/help" },
   { label: "Marketplace", href: "https://marketplace.umojab2b.com" }, // Added marketplace link
 ];
 
