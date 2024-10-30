@@ -97,7 +97,7 @@ export function Hero() {
                 <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-sm bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
                   <div className="w-full h-[calc(100%+2px)] -pt-[1px]">
                     <video
-                      src="https://ik.imagekit.io/y6vyyorps/Screen%20Recording%202024-10-30%20at%2009.12.29.mov/ik-video.mp4"
+                      src="/food.webm"
                       className="w-full h-full rounded-3xl object-cover"
                       autoPlay
                       muted
