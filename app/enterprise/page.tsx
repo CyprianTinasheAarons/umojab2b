@@ -466,6 +466,41 @@ export default function Component() {
         </div>
       </div>
 
+      {/* B2B Marketplace CTA */}
+      <section className="container mx-auto px-4 py-12 border-t">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold tracking-tight mb-3">
+              Unlock Growth with the Umoja B2B Marketplace
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Find everything your business needs to succeed – from ERP
+              solutions to creative services – all in one place.
+            </p>
+          </div>
+
+          <Link href="https://marketplace.umojab2b.com">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow">
+              <Image
+                src="https://ik.imagekit.io/y6vyyorps/sutirta-budiman-Jgiv1rSIpVM-unsplash.jpg?updatedAt=1730288853233"
+                alt="Umoja B2B Marketplace"
+                width={1200}
+                height={400}
+                className="object-cover w-full h-[300px]"
+              />
+              <div className="p-6 text-center">
+                <Button
+                  size="lg"
+                  className="text-lg rounded-full hover:scale-105 transition-transform bg-[#e7af08] hover:bg-[#ca8804] text-[#fefce8]"
+                >
+                  Get Started with Umoja B2B
+                </Button>
+              </div>
+            </Card>
+          </Link>
+        </div>
+      </section>
+
       {/* Confirmation Dialog */}
       <Dialog open={showConfirmation} onOpenChange={setShowConfirmation}>
         <DialogContent>
