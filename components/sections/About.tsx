@@ -76,7 +76,7 @@ export function About({ id }: { id: string }) {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="https://ik.imagekit.io/y6vyyorps/pexels-judah-visuals-dubai-228505866-12268585.jpg?updatedAt=1730262657631"
+                  src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
                   alt="African entrepreneurs working together"
                   width={600}
                   height={400}
