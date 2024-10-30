@@ -368,8 +368,9 @@ export default function Component() {
                             <FormLabel>
                               I agree to the{" "}
                               <Link
-                                href="#"
+                                href="/terms"
                                 className="text-primary hover:text-primary/90 underline"
+                                target="_blank"
                               >
                                 Terms of Service
                               </Link>
