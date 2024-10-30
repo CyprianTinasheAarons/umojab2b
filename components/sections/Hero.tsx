@@ -7,6 +7,8 @@ import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 const features = [
   "Logo Design",
@@ -18,6 +20,17 @@ const features = [
 ];
 
 export function Hero() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/5 to-background py-12 sm:py-24">
       <div className="container mx-auto px-4 relative z-10">
@@ -66,6 +79,9 @@ export function Hero() {
                     size="lg"
                     variant="outline"
                     className="w-full sm:w-auto text-lg rounded-3xl"
+                    data-cal-namespace="15min"
+                    data-cal-link="cyprian-aarons-topiax/15min"
+                    data-cal-config='{"layout":"month_view"}'
                   >
                     Book a Demo
                   </Button>

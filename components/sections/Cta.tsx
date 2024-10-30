@@ -3,8 +3,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { getCalApi } from "@calcom/embed-react";
+import { useEffect } from "react";
 
 export function Cta() {
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "15min" });
+      cal("ui", {
+        styles: { branding: { brandColor: "#000000" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
   return (
     <section className="relative py-24 bg-gradient-to-br from-[#ffd245] to-[#e7b005] text-[#433405]">
       <div className="absolute inset-0 bg-[url('/patterns/african-pattern.svg')] opacity-5" />
@@ -43,6 +55,9 @@ export function Cta() {
                   size="lg"
                   variant="outline"
                   className="text-lg border-[#433405] text-[#433405] hover:bg-[#433405] hover:text-[#fff0c2] w-full sm:w-auto px-8"
+                  data-cal-namespace="15min"
+                  data-cal-link="cyprian-aarons-topiax/15min"
+                  data-cal-config='{"layout":"month_view"}'
                 >
                   Book Free Consultation
                 </Button>
