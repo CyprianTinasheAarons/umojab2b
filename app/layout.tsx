@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   keywords: [
     "eCommerce solutions",
     "B2B eCommerce platform",
-    "brand development services", 
-    "eCommerce website design",
+    "brand development services",
+    "eCommerce website design", 
     "digital branding strategies",
     "brand identity design",
     "eCommerce marketing agency",
@@ -39,7 +39,33 @@ export const metadata: Metadata = {
     "African retail solutions",
     "African wholesale platform",
     "African business growth",
-    "African digital transformation"
+    "African digital transformation",
+    // General B2B Keywords
+    "B2B marketplace Zimbabwe",
+    "B2B solutions Zimbabwe", 
+    "B2B trade portal Zimbabwe",
+    "Zimbabwe B2B directory",
+    "business networking Zimbabwe",
+    // Industry-Specific
+    "eCommerce solutions for Zimbabwean businesses",
+    "branding solutions for B2B companies",
+    "digital marketing for B2B in Zimbabwe",
+    "supply chain solutions Zimbabwe",
+    "procurement services Zimbabwe",
+    // Long-Tail Keywords
+    "how to start a B2B business in Zimbabwe",
+    "best practices for B2B marketing in Zimbabwe",
+    "top B2B platforms for small businesses in Zimbabwe",
+    "affordable B2B branding services in Harare",
+    "how to generate leads for B2B businesses in Zimbabwe",
+    // Localized
+    "Harare B2B services",
+    "Bulawayo eCommerce solutions",
+    "local suppliers for B2B in Zimbabwe",
+    // Trends
+    "digital transformation in Zimbabwean businesses",
+    "impact of social media on B2B marketing in Zimbabwe",
+    "AI in B2B marketing strategies"
   ],
   openGraph: {
     type: "website", 
