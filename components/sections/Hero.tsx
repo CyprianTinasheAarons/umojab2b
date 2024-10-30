@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
-
+import { useRouter } from "next/navigation";
 const features = [
   "Logo Design",
   "Business Cards",
@@ -20,6 +20,7 @@ const features = [
 ];
 
 export function Hero() {
+  const router = useRouter();
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "15min" });
@@ -67,6 +68,7 @@ export function Hero() {
                   <Button
                     size="lg"
                     className="w-full sm:w-auto text-lg rounded-3xl"
+                    onClick={() => router.push("https://store.umojab2b.com")}
                   >
                     Start Your Journey
                   </Button>
