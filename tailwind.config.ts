@@ -121,6 +121,14 @@ const config: Config = {
   				to: {
   					backgroundPosition: 'var(--bg-size) 0'
   				}
+  			},
+  			shimmer: {
+  				from: {
+  					backgroundPosition: '0 0'
+  				},
+  				to: {
+  					backgroundPosition: '-200% 0'
+  				}
   			}
   		},
   		animation: {
@@ -130,7 +138,8 @@ const config: Config = {
   			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
   			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
-  			gradient: 'gradient 8s linear infinite'
+  			gradient: 'gradient 8s linear infinite',
+  			shimmer: 'shimmer 2s linear infinite'
   		}
   	}
   },
