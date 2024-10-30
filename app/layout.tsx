@@ -3,14 +3,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { Navigation } from "@/components/layout/Navigation";
 import { Footer } from "@/components/layout/Footer";
-
-import { ReactTagManager } from "react-gtm-ts";
-
-ReactTagManager.init({
-  code: "G-XQDJFQLNLM", // GTM Code
-  debug: false, // debug mode (default false)
-  performance: false, // starts GTM only after user interaction (improve initial page load)
-});
+import Script from "next/script";
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -54,6 +47,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-XQDJFQLNLM"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XQDJFQLNLM');
+          `}
+        </Script>
+      </head>
       <body
         className={`${plusJakarta.variable} font-sans`}
         suppressHydrationWarning
