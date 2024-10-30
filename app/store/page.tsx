@@ -85,7 +85,7 @@ export default function Component() {
           {/* Mobile view - single image */}
           <div className="md:hidden">
             <Image
-              src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+              src="https://ik.imagekit.io/y6vyyorps/sutirta-budiman-Jgiv1rSIpVM-unsplash.jpg?updatedAt=1730288853233"
               alt="Business Solutions"
               width={400}
               height={300}
@@ -97,7 +97,7 @@ export default function Component() {
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="lg:col-span-2">
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-followalice-667200.jpg?updatedAt=1730288852382"
                 alt="Business Solutions"
                 width={800}
                 height={400}
@@ -113,21 +113,21 @@ export default function Component() {
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-hsapir-1109900.jpg?updatedAt=1730288850876"
                 alt="Feature 2"
                 width={400}
                 height={196}
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/zoo-5348334_1280.jpg?updatedAt=1730288849020"
                 alt="Feature 3"
                 width={400}
                 height={196}
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-shelaghmurphy-2883380.jpg?updatedAt=1730288850870"
                 alt="Feature 4"
                 width={400}
                 height={196}

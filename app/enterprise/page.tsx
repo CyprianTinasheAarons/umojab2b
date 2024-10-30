@@ -107,7 +107,7 @@ export default function Component() {
           {/* Mobile view - single image */}
           <div className="md:hidden">
             <Image
-              src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+              src="https://ik.imagekit.io/y6vyyorps/pexels-pixabay-70080.jpg?updatedAt=1730288848894"
               alt="Enterprise Solutions"
               width={400}
               height={300}
@@ -119,7 +119,7 @@ export default function Component() {
           <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             <div className="lg:col-span-2">
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-pixabay-40803.jpg?updatedAt=1730288852266"
                 alt="Enterprise Solutions"
                 width={800}
                 height={400}
@@ -135,21 +135,21 @@ export default function Component() {
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-hsapir-1109900.jpg?updatedAt=1730288850876"
                 alt="Feature 2"
                 width={400}
                 height={196}
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/zoo-5348334_1280.jpg?updatedAt=1730288849020"
                 alt="Feature 3"
                 width={400}
                 height={196}
                 className="rounded-lg object-cover w-full h-[196px]"
               />
               <Image
-                src="https://ik.imagekit.io/y6vyyorps/pexels-thatguycraig000-1670045.jpg?updatedAt=1730279064967"
+                src="https://ik.imagekit.io/y6vyyorps/pexels-followalice-667203.jpg?updatedAt=1730288851077"
                 alt="Feature 4"
                 width={400}
                 height={196}
@@ -427,7 +427,6 @@ export default function Component() {
                                 href="/terms"
                                 className="text-primary hover:text-primary/90 underline"
                                 target="_blank"
-                                
                               >
                                 Terms of Service
                               </Link>
