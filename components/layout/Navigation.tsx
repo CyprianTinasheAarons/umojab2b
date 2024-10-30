@@ -13,7 +13,7 @@ const navItems = [
   { label: "Pricing", href: "#pricing" },
   { label: "Benefits", href: "#benefits" },
   { label: "Contact", href: "/help" },
-  { label: "Marketplace", href: "https://marketplace.umojab2b.com" },
+  // { label: "Marketplace", href: "https://marketplace.umojab2b.com" },
 ];
 
 export function Navigation() {
