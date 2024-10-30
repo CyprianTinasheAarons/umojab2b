@@ -12,15 +12,41 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Umoja - Transform Your Business Online",
+  title: "Umoja - Professional eCommerce Solutions & Brand Development Services",
   description:
-    "Get everything you need to establish your brand online - from logo design to a fully functional e-commerce store, all in one comprehensive package.",
+    "Leading B2B eCommerce platform and branding solutions for small businesses. Expert eCommerce website development, brand identity design, and digital branding strategies. Transform your business with our comprehensive eCommerce marketing services.",
+  keywords: [
+    "eCommerce solutions",
+    "B2B eCommerce platform",
+    "brand development services", 
+    "eCommerce website design",
+    "digital branding strategies",
+    "brand identity design",
+    "eCommerce marketing agency",
+    "online brand management",
+    "eCommerce consulting",
+    "branding solutions for small businesses",
+    "African eCommerce",
+    "Zimbabwe online business",
+    "African B2B marketplace",
+    "African digital commerce",
+    "African business solutions",
+    "African brand development",
+    "African SME solutions",
+    "African market expansion",
+    "cross-border African trade",
+    "African business digitization",
+    "African retail solutions",
+    "African wholesale platform",
+    "African business growth",
+    "African digital transformation"
+  ],
   openGraph: {
-    type: "website",
+    type: "website", 
     url: "https://www.umojab2b.com/",
-    title: "Umoja - Transform Your Business Online",
+    title: "Umoja - Professional eCommerce Solutions & Brand Development Services",
     description:
-      "Get everything you need to establish your brand online - from logo design to a fully functional e-commerce store, all in one comprehensive package.",
+      "Leading B2B eCommerce platform and branding solutions for small businesses. Expert eCommerce website development, brand identity design, and digital branding strategies. Transform your business with our comprehensive eCommerce marketing services.",
     images: [
       {
         url: "https://ik.imagekit.io/y6vyyorps/PHOTO-2024-10-29-13-43-35%203.jpg?updatedAt=1730214693705",
@@ -29,9 +55,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Umoja - Transform Your Business Online",
-    description:
-      "Get everything you need to establish your brand online - from logo design to a fully functional e-commerce store, all in one comprehensive package.",
+    title: "Umoja - Professional eCommerce Solutions & Brand Development Services",
+    description: 
+      "Leading B2B eCommerce platform and branding solutions for small businesses. Expert eCommerce website development, brand identity design, and digital branding strategies. Transform your business with our comprehensive eCommerce marketing services.",
     images: [
       {
         url: "https://ik.imagekit.io/y6vyyorps/PHOTO-2024-10-29-13-43-35%203.jpg?updatedAt=1730214693705",
