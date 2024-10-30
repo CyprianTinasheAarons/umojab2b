@@ -10,39 +10,65 @@ import { FadeIn } from "@/components/animations/FadeIn";
 
 const faqs = [
   {
-    question: "How secure is my business data with Umoja B2B?",
+    question: "Who is the Umoja Essentials Package best suited for?",
     answer:
-      "We prioritize your privacy and security. Umoja B2B uses industry-standard encryption and performs regular data backups to ensure that your information is safe. Your data will never be shared with third parties without your consent. For more details, you can view our full Privacy Policy here.",
+      "The Umoja Essentials Package is designed for small to medium African businesses that want to establish an online presence quickly and affordably. This package provides everything needed to start selling online, including an e-commerce store, product catalog, and a branding kit.",
   },
   {
-    question: "Can I manage my business across multiple devices?",
+    question: "What's included in the Umoja Enterprise Package?",
     answer:
-      "Absolutely! Umoja B2B is accessible on both desktop and mobile devices, allowing you to manage your inventory, track orders, and update your product listings from anywhere, anytime.",
+      "The Umoja Enterprise Package is built for businesses that require more advanced digital solutions. It includes all Essentials features plus an ERP system for comprehensive management, AI-powered automations, chatbots, and a full branding suite. This package is ideal for larger businesses looking to streamline and scale their operations.",
   },
   {
-    question: "What if I need help setting up my business on Umoja B2B?",
+    question:
+      "Can I upgrade from the Essentials Package to the Enterprise Package?",
     answer:
-      "We're here to support you. Our team offers onboarding assistance to get your business set up quickly and efficiently. Plus, our Help Center has step-by-step guides and tutorials, or you can reach out to our support team for personalized help.",
+      "Yes, you can upgrade from the Umoja Essentials Package to the Umoja Enterprise Package at any time. Contact our support team to discuss your specific needs and arrange the upgrade.",
   },
   {
-    question: "Are there any fees for listing my products on Umoja B2B?",
+    question: "How quickly can my online store be ready to launch?",
     answer:
-      "It's free to list your products on Umoja B2B! We do charge a small transaction fee on sales made through the platform to cover operational costs and maintain our services. Contact our team for a detailed breakdown of fees.",
+      "With the Umoja Essentials Package, your digital store can be ready in just a few days. Our streamlined setup process allows you to start reaching customers quickly without months of back-and-forth.",
   },
   {
-    question: "What payment methods are supported on Umoja B2B?",
+    question: "Are there any limits to the products I can showcase?",
     answer:
-      "We support a variety of payment options tailored to African businesses, including mobile money, bank transfers, and traditional credit and debit card payments. We're continuously working to add more payment methods for convenience and security.",
+      "The Umoja Essentials Package allows up to 30 products, ideal for smaller catalogs. With the Umoja Enterprise Package, you can showcase unlimited products, making it suitable for businesses with extensive inventories.",
   },
   {
-    question: "How can Umoja B2B help grow my business?",
+    question: "Do I need technical skills to use these packages?",
     answer:
-      "We combine AI-driven cataloging with a powerful network of influencers to boost visibility for your products, reaching new customers and increasing sales. Plus, our tools help streamline your inventory management and customer service, so you can focus on growing your brand.",
+      "No technical skills are required! Both Umoja Essentials and Enterprise are designed with ease of use in mind. Our user-friendly admin panel, along with ongoing support, allows you to manage your store confidently.",
   },
   {
-    question: "What happens if I decide to leave Umoja B2B?",
+    question: "What types of payments can my customers use?",
     answer:
-      "We'd hate to see you go, but you're free to close your account at any time. Your data remains secure, and we provide a simple process for exporting any information you may need. Reach out to support if you need assistance with this process.",
+      "Our platform supports multiple payment options, including online payments and Cash on Delivery (COD), to meet the preferences of African customers.",
+  },
+  {
+    question: "How will AI tools help my business?",
+    answer:
+      "The AI tools included in both packages assist with product presentation and cataloging, making it easier to manage and showcase your products professionally. In the Enterprise Package, additional AI automations, chatbots, and agents help streamline operations and enhance customer service.",
+  },
+  {
+    question: "What is included in the Umoja Branding Kit?",
+    answer:
+      "The Umoja Branding Kit includes a professionally designed logo and a brand kit with colors, fonts, and templates, ensuring your business has a consistent and attractive look online.",
+  },
+  {
+    question: "Do you offer customer support if I have questions?",
+    answer:
+      "Yes, Umoja offers dedicated customer support to assist you with setup, troubleshooting, and any questions as you grow your online business.",
+  },
+  {
+    question: "Can I access the Umoja Marketplace with either package?",
+    answer:
+      "Yes, both the Essentials and Enterprise packages grant you access to the Umoja Marketplace, allowing you to connect with other African businesses and reach a wider audience.",
+  },
+  {
+    question: "How do I know which package is right for me?",
+    answer:
+      "If you're a small to medium business looking to get started online with essential tools, Umoja Essentials is likely the right fit. For larger businesses or those needing advanced features like ERP, AI automations, and custom branding, Umoja Enterprise will provide the scalability and tools you need. Reach out to our team for a personalized recommendation!",
   },
 ];
 

@@ -14,61 +14,68 @@ import {
 
 const tiers = [
   {
-    name: "Professional",
-    id: "tier-professional",
+    name: "Umoja Essentials",
+    id: "tier-essentials",
     mainIcon: <RocketLaunchIcon className="h-8 w-8 text-[#fdc412]" />,
-    description: "Complete branding and online presence solution.",
+    description:
+      "Perfect for small African businesses ready to go digital and expand their reach.",
     setupPrice: "$249.99",
     monthlyPrice: "$9.99",
-    href: "#",
+    href: "/store",
     features: [
-      { icon: <GiftIcon className="h-4 w-4" />, text: "Premium Logo Package" },
+      { icon: <StarIcon className="h-4 w-4" />, text: "SEO for Visibility" },
+      { icon: <GiftIcon className="h-4 w-4" />, text: "Domain & Landing Page" },
       {
-        icon: <HeartIcon className="h-4 w-4" />,
-        text: "Premium Business Cards",
+        icon: <BoltIcon className="h-4 w-4" />,
+        text: "Umoja Shop & Admin Panel",
       },
-      { icon: <BoltIcon className="h-4 w-4" />, text: "Full Brand Toolkit" },
-      { icon: <FireIcon className="h-4 w-4" />, text: "Multi-Page Website" },
-      { icon: <StarIcon className="h-4 w-4" />, text: "Advanced SEO Package" },
-      { icon: <TrophyIcon className="h-4 w-4" />, text: "Online Store Setup" },
-      { icon: <SparklesIcon className="h-4 w-4" />, text: "Priority Support" },
+      { icon: <HeartIcon className="h-4 w-4" />, text: "Flexible Payments" },
+      {
+        icon: <FireIcon className="h-4 w-4" />,
+        text: "Host up to 30 Products",
+      },
+      {
+        icon: <SparklesIcon className="h-4 w-4" />,
+        text: "AI Tools for Product Presentation",
+      },
+      { icon: <TrophyIcon className="h-4 w-4" />, text: "Umoja Branding Kit" },
+      {
+        icon: <RocketLaunchIcon className="h-4 w-4" />,
+        text: "Marketplace Access",
+      },
     ],
     featured: true,
   },
   {
-    name: "Enterprise",
+    name: "Umoja Enterprise",
     id: "tier-enterprise",
     mainIcon: <TrophyIcon className="h-8 w-8 text-[#fdc412]" />,
     description:
-      "Custom branding and e-commerce solutions for large businesses.",
+      "Ideal for growing African enterprises needing powerful, AI-driven digital tools for expansion.",
     setupPrice: "Contact us",
     monthlyPrice: "Custom",
-    href: "#",
+    href: "/enterprise",
     features: [
-      { icon: <StarIcon className="h-4 w-4" />, text: "Custom Brand Strategy" },
       {
-        icon: <BoltIcon className="h-4 w-4" />,
-        text: "AI-Powered Business Tools",
+        icon: <StarIcon className="h-4 w-4" />,
+        text: "Everything in Umoja Essentials",
       },
+      { icon: <BoltIcon className="h-4 w-4" />, text: "Umoja ERP System" },
       {
         icon: <FireIcon className="h-4 w-4" />,
-        text: "Enterprise Resource Planning (ERP)",
+        text: "Advanced AI Automation",
       },
       {
         icon: <HeartIcon className="h-4 w-4" />,
-        text: "Fleet Management System",
+        text: "AI Omnichannel Customer Service",
       },
       {
         icon: <GiftIcon className="h-4 w-4" />,
-        text: "Advanced E-commerce Features",
+        text: "Complete Branding & Creative Suite",
       },
       {
         icon: <SparklesIcon className="h-4 w-4" />,
-        text: "Custom Web Development",
-      },
-      {
-        icon: <RocketLaunchIcon className="h-4 w-4" />,
-        text: "Dedicated Account Manager",
+        text: "Unlimited Product Management",
       },
     ],
     featured: false,
@@ -141,6 +148,9 @@ export function Pricing({ id }: { id?: string }) {
               ))}
             </ul>
             <Button
+              onClick={() => {
+                window.location.href = tier.href;
+              }}
               className={classNames(
                 tier.featured
                   ? "bg-[#fdc412] text-white hover:bg-[#cd9b01]"

@@ -29,11 +29,11 @@ export function Cta() {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Transform Your African Business Vision into Reality
+              Ready to Attract More Customers and Boost Sales?
             </h2>
             <p className="text-xl md:text-2xl mb-8 text-[#725a11]">
-              Join thousands of African entrepreneurs building their digital
-              presence with Umoja B2B Solutions
+              Unlock new opportunities and reach more buyers with Umoja B2B's
+              powerful digital solutions for African businesses
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.div
@@ -42,6 +42,9 @@ export function Cta() {
               >
                 <Button
                   size="lg"
+                  onClick={() => {
+                    window.location.href = "#pricing";
+                  }}
                   className="text-lg bg-[#433405] hover:bg-[#725a11] text-[#fff0c2] w-full sm:w-auto px-8"
                 >
                   Start Your Digital Journey

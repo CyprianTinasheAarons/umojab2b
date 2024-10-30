@@ -25,8 +25,11 @@ export default function HelpPage() {
               business grow online. Our sales team is ready to assist.
             </p>
             <p className="mt-4 text-sm/6 font-semibold">
-              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
-                Start a conversation <span aria-hidden="true">&rarr;</span>
+              <a
+                href="mailto:sales@umojab2b.com"
+                className="text-[#cd9b01] hover:text-[#a37d05]"
+              >
+                Email sales@umojab2b.com <span aria-hidden="true">&rarr;</span>
               </a>
             </p>
           </div>
@@ -44,8 +47,12 @@ export default function HelpPage() {
               we&apos;ll fix it right away to ensure smooth operations.
             </p>
             <p className="mt-4 text-sm/6 font-semibold">
-              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
-                Submit a report <span aria-hidden="true">&rarr;</span>
+              <a
+                href="mailto:support@umojab2b.com"
+                className="text-[#cd9b01] hover:text-[#a37d05]"
+              >
+                Email support@umojab2b.com{" "}
+                <span aria-hidden="true">&rarr;</span>
               </a>
             </p>
           </div>
@@ -63,8 +70,11 @@ export default function HelpPage() {
               available 24/7 to assist you.
             </p>
             <p className="mt-4 text-sm/6 font-semibold">
-              <a href="#" className="text-[#cd9b01] hover:text-[#a37d05]">
-                Get support <span aria-hidden="true">&rarr;</span>
+              <a
+                href="mailto:hello@umojab2b.com"
+                className="text-[#cd9b01] hover:text-[#a37d05]"
+              >
+                Email hello@umojab2b.com <span aria-hidden="true">&rarr;</span>
               </a>
             </p>
           </div>

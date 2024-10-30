@@ -51,16 +51,12 @@ export function Hero() {
                 </div>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
-                Transform Your Business with a{" "}
-                <span className="text-primary">
-                  Professional Online Presence
-                </span>
+                Helping African Businesses{" "}
+                <span className="text-primary">Succeed Online</span>
               </h1>
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 sm:mb-8">
-                Get everything you need to succeed online - from stunning
-                branding to a powerful e-commerce website. Join successful
-                African businesses already selling globally through our
-                platform.
+                Get affordable tools to reach more customers, grow your brand,
+                and unlock new opportunities.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.div
@@ -72,7 +68,7 @@ export function Hero() {
                     className="w-full sm:w-auto text-lg rounded-3xl"
                     onClick={() => router.push("/store")}
                   >
-                    Launch Your Business Online
+                    Get Started Today
                   </Button>
                 </motion.div>
                 <motion.div
@@ -87,7 +83,7 @@ export function Hero() {
                     data-cal-link="cyprian-aarons-topiax/15min"
                     data-cal-config='{"layout":"month_view"}'
                   >
-                    See Live Demo
+                    See How It Works
                   </Button>
                 </motion.div>
               </div>

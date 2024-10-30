@@ -7,24 +7,20 @@ import { X } from "lucide-react";
 
 const problems = [
   {
-    title: "Limited Market Reach",
-    description:
-      "Your business is stuck serving only local customers when you could be reaching millions globally",
+    title: "Limited Online Presence",
+    description: "No online presence means missing out on potential customers",
   },
   {
-    title: "Inventory Chaos", 
-    description:
-      "Managing stock across multiple channels leads to overselling and unhappy customers",
+    title: "High Costs of Going Digital",
+    description: "Traditional web development is expensive for small businesses",
   },
   {
-    title: "Payment & Trust Barriers",
-    description:
-      "International customers hesitate to buy because they don't trust unfamiliar payment methods",
+    title: "Complex Tools and Platforms",
+    description: "Most digital tools are too complicated to use effectively",
   },
   {
-    title: "Lost Revenue",
-    description:
-      "Without a proper online presence, you're missing out on the $180B African ecommerce market",
+    title: "Lack of Support and Training",
+    description: "No guidance on how to use digital tools properly",
   },
 ];
 
@@ -35,11 +31,11 @@ export function ProblemAgitation({ id }: { id?: string }) {
         <FadeIn>
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold mb-4">
-              African Businesses Are Being Left Behind
+              Don&apos;t Let Your Business Fall Behind
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Don&apos;t let outdated systems and fragmented solutions hold your
-              business back. Are these challenges limiting your growth?
+              Many African businesses struggle to keep up with changing times.
+              Are these issues holding you back?
             </p>
           </div>
         </FadeIn>
@@ -57,53 +53,85 @@ export function ProblemAgitation({ id }: { id?: string }) {
             </div>
           </div>
 
-          <div className="absolute inset-0 max-w-screen overflow-hidden">
-            {problems.map((problem, index) => {
-              const angle = (index * 2 * Math.PI) / problems.length;
-              const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 140 : 250;
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
-
-              return (
+          <div className="md:absolute inset-0 max-w-screen overflow-hidden">
+            <div className="md:hidden flex flex-col gap-4 px-4">
+              {problems.map((problem, index) => (
                 <motion.div
                   key={index}
-                  className="absolute"
-                  style={{
-                    left: `calc(50% + ${x}px)`,
-                    top: `calc(50% + ${y}px)`,
-                    transform: "translate(-50%, -50%)",
-                  }}
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{
                     scale: 1,
                     opacity: 1,
-                    y: [0, -10, 0],
                   }}
                   transition={{
                     duration: 0.5,
                     delay: index * 0.2,
                     type: "spring",
-                    y: {
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    },
                   }}
                 >
-                  <Card className="p-3 md:p-6 text-center backdrop-blur-sm bg-background/80 relative max-w-[140px] md:max-w-[280px]">
+                  <Card className="p-3 text-center backdrop-blur-sm bg-background/80 relative">
                     <div className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1">
-                      <X className="text-white w-4 h-4 md:w-6 md:h-6" />
+                      <X className="text-white w-4 h-4" />
                     </div>
-                    <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
+                    <h3 className="text-sm font-semibold mb-1">
                       {problem.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground hidden md:block">
+                    <p className="text-xs text-muted-foreground">
                       {problem.description}
                     </p>
                   </Card>
                 </motion.div>
-              );
-            })}
+              ))}
+            </div>
+
+            <div className="hidden md:block">
+              {problems.map((problem, index) => {
+                const angle = (index * 2 * Math.PI) / problems.length;
+                const radius = 250;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
+
+                return (
+                  <motion.div
+                    key={index}
+                    className="absolute"
+                    style={{
+                      left: `calc(50% + ${x}px)`,
+                      top: `calc(50% + ${y}px)`,
+                      transform: "translate(-50%, -50%)",
+                    }}
+                    initial={{ scale: 0, opacity: 0 }}
+                    animate={{
+                      scale: 1,
+                      opacity: 1,
+                      y: [0, -10, 0],
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.2,
+                      type: "spring",
+                      y: {
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      },
+                    }}
+                  >
+                    <Card className="p-6 text-center backdrop-blur-sm bg-background/80 relative max-w-[280px]">
+                      <div className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1">
+                        <X className="text-white w-6 h-6" />
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">
+                        {problem.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {problem.description}
+                      </p>
+                    </Card>
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

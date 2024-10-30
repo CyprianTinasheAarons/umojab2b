@@ -14,10 +14,7 @@ import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 
 const footerLinks = {
-  company: [
-    { label: "About Us", href: "/about" },
-    { label: "Blog", href: "https://blog.umojab2b.com" },
-  ],
+  company: [{ label: "Blog", href: "https://blog.umojab2b.com" }],
   support: [
     { label: "Help Center", href: "/help" },
     { label: "Terms of Service", href: "/terms" },

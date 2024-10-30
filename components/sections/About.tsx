@@ -21,31 +21,29 @@ export function About({ id }: { id: string }) {
               className="md:w-1/2"
             >
               <h2 className="text-3xl font-bold mb-4">
-                Your Partner in African{" "}
-                <span className="text-primary">Digital Commerce</span>
+                About <span className="text-primary">Us</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                At Umoja B2B, we help African entrepreneurs overcome digital
-                commerce challenges and reach wider audiences.
+                At Umoja B2B, we're dedicated to helping African entrepreneurs succeed in digital commerce. We understand the unique challenges and opportunities in the African market and offer tailored solutions to help you reach a wider audience.
               </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                 {[
                   {
                     title: "Tailored for Africa",
-                    description: "Solutions built for African market needs",
+                    description: "Solutions designed specifically for the African market",
                   },
                   {
                     title: "Smart Tools",
-                    description: "AI-powered cataloging and management",
+                    description: "AI-powered tools for easy cataloging and business management",
                   },
                   {
                     title: "Growth Partner",
-                    description: "Supporting your business expansion",
+                    description: "Supporting your journey to expand and thrive",
                   },
                   {
                     title: "Our Story",
-                    description: "Turning untapped potential into real growth",
+                    description: "We believe in transforming untapped potential into real growth for African businesses",
                   },
                 ].map((feature, index) => (
                   <motion.div

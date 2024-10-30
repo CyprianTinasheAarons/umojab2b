@@ -11,40 +11,40 @@ const benefits = [
     icon: <DollarSign className="w-6 h-6 text-[#cd9b01]" />,
     title: "Save Money",
     description:
-      "Get enterprise-level services at a fraction of the cost. Our all-in-one package delivers maximum value for less.",
-    before: "Spending thousands on separate services",
-    after: "One affordable package for everything",
+      "Get all the tools you need at a low price. Our package includes everything to help your business grow online.",
+    before: "Paying too much for different tools",
+    after: "One low price for everything you need",
   },
   {
     icon: <Clock className="w-6 h-6 text-[#cd9b01]" />,
-    title: "Launch Faster",
+    title: "Start Quick",
     description:
-      "Stop waiting months to get online. We'll have your complete digital presence ready within days, not months.",
-    before: "Months of back-and-forth with agencies",
-    after: "Live and selling in just days",
+      "Get your business online fast. We help you launch in just a few days.",
+    before: "Waiting too long for your website",
+    after: "Ready to sell in just days",
   },
   {
     icon: <CheckCircle2 className="w-6 h-6 text-[#cd9b01]" />,
-    title: "African-Focused",
+    title: "Made for Africa",
     description:
-      "Built specifically for African businesses. We create solutions that resonate with local markets and customers.",
-    before: "Generic solutions that don't fit",
-    after: "Tailored for African success",
+      "Built just for African businesses. We know what works in local markets.",
+    before: "Tools not made for Africa",
+    after: "Perfect fit for African business",
   },
 ];
 
 export function ValueProposition({ id }: { id?: string }) {
   return (
     <section id={id} className="py-24 bg-[#fef9e8] relative">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mb-16">
         <FadeIn>
-          <div className="text-center mb-16">
+          <div className="text-center mb-24">
             <h2 className="text-4xl font-bold text-[#433405] mb-4">
               Transform Your Business
             </h2>
             <p className="text-lg text-[#725a11] max-w-2xl mx-auto">
-              Join hundreds of African businesses that have transformed their
-              digital presence with our complete solution
+              Join hundreds of African businesses boosting their digital
+              presence with our complete, tailored solution
             </p>
           </div>
         </FadeIn>
