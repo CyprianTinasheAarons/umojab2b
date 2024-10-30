@@ -7,7 +7,7 @@ import { X } from "lucide-react";
 
 const problems = [
   {
-    title: "Limited Online Presence",
+    title: "Limited Online Presence", 
     description: "No online presence means missing out on potential customers",
   },
   {
@@ -58,7 +58,7 @@ export function ProblemAgitation({ id }: { id?: string }) {
               const angle = (index * 2 * Math.PI) / problems.length;
               const radius =
                 typeof window !== "undefined" && window.innerWidth < 768
-                  ? 90
+                  ? 60 // Reduced radius significantly for mobile
                   : 250;
               const x = Math.cos(angle) * radius;
               const y = Math.sin(angle) * radius;
@@ -89,11 +89,11 @@ export function ProblemAgitation({ id }: { id?: string }) {
                     },
                   }}
                 >
-                  <Card className="p-1.5 md:p-6 text-center backdrop-blur-sm bg-background/80 relative max-w-[100px] md:max-w-[280px]">
+                  <Card className="p-1.5 md:p-6 text-center backdrop-blur-sm bg-background/80 relative max-w-[80px] md:max-w-[280px]">
                     <div className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 rounded-full p-0.5 md:p-1">
                       <X className="text-white w-2.5 h-2.5 md:w-6 md:h-6" />
                     </div>
-                    <h3 className="text-[10px] md:text-lg font-semibold mb-0.5 md:mb-2 line-clamp-2">
+                    <h3 className="text-[8px] md:text-lg font-semibold mb-0.5 md:mb-2 line-clamp-2">
                       {problem.title}
                     </h3>
                     <p className="text-xs md:text-sm text-muted-foreground hidden md:block">
