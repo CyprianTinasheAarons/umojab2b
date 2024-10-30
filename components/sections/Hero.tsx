@@ -96,12 +96,21 @@ export function Hero() {
 
           <div className="relative w-full max-w-6xl mx-auto">
             <div className="relative aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-                className="w-full h-full rounded-lg shadow-lg"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              ></iframe>
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#fef9e8]/80 to-[#fff0c2]/80 p-[2px] shadow-lg shadow-[#cd9b01]/20 backdrop-blur-md">
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-[#ffd245] to-[#cd9b01]/30 opacity-10 blur-xl" />
+                <div className="absolute inset-0 rounded-3xl bg-white/10 backdrop-blur-sm bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10">
+                  <div className="w-full h-[calc(100%+2px)] -pt-[1px]">
+                    <video
+                      src="https://ik.imagekit.io/y6vyyorps/Screen%20Recording%202024-10-30%20at%2009.12.29.mov/ik-video.mp4"
+                      className="w-full h-full rounded-3xl object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

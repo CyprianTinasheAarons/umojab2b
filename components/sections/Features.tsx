@@ -20,7 +20,7 @@ export function Features({ id }: { id?: string }) {
               <Link href="/services/branding">
                 <Image
                   alt="Brand Identity"
-                  src="https://placehold.co/800x600/png"
+                  src="https://ik.imagekit.io/y6vyyorps/Screenshot%202024-10-30%20at%2009.47.22.png?updatedAt=1730274595218"
                   width={800}
                   height={600}
                   className="h-80 object-cover object-left"
@@ -47,7 +47,7 @@ export function Features({ id }: { id?: string }) {
               <Link href="/services/web">
                 <Image
                   alt="Web Presence"
-                  src="https://placehold.co/800x600/png"
+                  src="https://ik.imagekit.io/y6vyyorps/Screenshot%202024-10-30%20at%2009.46.16.png?updatedAt=1730274595913"
                   width={800}
                   height={600}
                   className="h-80 object-cover object-left lg:object-right"
@@ -74,9 +74,9 @@ export function Features({ id }: { id?: string }) {
               <Link href="/services/ecommerce">
                 <Image
                   alt="E-commerce"
-                  src="https://placehold.co/1600x600/png"
+                  src="https://ik.imagekit.io/y6vyyorps/Screenshot%202024-10-30%20at%2009.49.07.png?updatedAt=1730274594478"
                   width={1600}
-                  height={600}
+                  height={900}
                   className="h-80 object-cover object-center"
                 />
               </Link>

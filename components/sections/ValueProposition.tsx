@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Clock, DollarSign } from "lucide-react";
+import Image from "next/image";
 
 const benefits = [
   {
@@ -34,7 +35,7 @@ const benefits = [
 
 export function ValueProposition({ id }: { id?: string }) {
   return (
-    <section id={id} className="py-24 bg-[#fef9e8]">
+    <section id={id} className="py-24 bg-[#fef9e8] relative">
       <div className="container mx-auto px-4">
         <FadeIn>
           <div className="text-center mb-16">
@@ -48,7 +49,7 @@ export function ValueProposition({ id }: { id?: string }) {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto z-40">
           {benefits.map((benefit) => (
             <FadeIn key={benefit.title}>
               <motion.div
@@ -84,6 +85,14 @@ export function ValueProposition({ id }: { id?: string }) {
             </FadeIn>
           ))}
         </div>
+      </div>
+      <div className="absolute bottom-0 left-0 w-[200px] h-[200px] z-1">
+        <Image
+          src="https://ik.imagekit.io/y6vyyorps/Leonardo_Phoenix_A_3D_pixelstyle_cartoon_of_a_happy_elephant_s_0.png?updatedAt=1730269556999"
+          alt="Happy elephant"
+          fill
+          style={{ objectFit: "contain" }}
+        />
       </div>
     </section>
   );

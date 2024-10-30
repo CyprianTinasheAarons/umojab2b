@@ -1,34 +1,30 @@
 "use client";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { AlertTriangle, Globe, ShieldCheck, DollarSign } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { X } from "lucide-react";
 
 const problems = [
   {
-    icon: <Globe className="h-8 w-8" />,
     title: "Limited Market Reach",
     description:
-      "Struggling to expand your customer base beyond local markets? Missing out on regional and global opportunities?",
+      "Your business is stuck serving only local customers when you could be reaching millions globally",
   },
   {
-    icon: <AlertTriangle className="h-8 w-8" />,
-    title: "Inventory Chaos",
+    title: "Inventory Chaos", 
     description:
-      "Losing sales due to stock mix-ups? Tired of manual inventory tracking and order fulfillment errors?",
+      "Managing stock across multiple channels leads to overselling and unhappy customers",
   },
   {
-    icon: <ShieldCheck className="h-8 w-8" />,
     title: "Payment & Trust Barriers",
     description:
-      "Concerned about secure payments? Finding it hard to build customer trust in your online presence?",
+      "International customers hesitate to buy because they don't trust unfamiliar payment methods",
   },
   {
-    icon: <DollarSign className="h-8 w-8" />,
     title: "Lost Revenue",
     description:
-      "Missing out on growth opportunities due to outdated systems and disconnected business tools?",
+      "Without a proper online presence, you're missing out on the $180B African ecommerce market",
   },
 ];
 
@@ -48,33 +44,67 @@ export function ProblemAgitation({ id }: { id?: string }) {
           </div>
         </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {problems.map((problem, index) => (
-            <FadeIn key={index} delay={index * 0.2}>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Card className="p-6 text-center h-full flex flex-col justify-between">
-                  <div>
-                    <motion.div
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.1 }}
-                      className="mb-6 text-primary inline-block"
-                    >
-                      {problem.icon}
-                    </motion.div>
-                    <h3 className="text-xl font-semibold mb-3">
+        <div className="relative max-w-screen md:max-w-7xl mx-auto flex justify-center items-center min-h-[500px] md:min-h-[800px] -mx-4 md:mx-0">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="relative w-[600px] h-[600px] md:w-[800px] md:h-[800px]">
+              <Image
+                src="https://ik.imagekit.io/y6vyyorps/Leonardo_Phoenix_A_3D_pixelstyle_cartoon_of_a_sad_elephant_at_3.png?updatedAt=1730269556977"
+                alt="Sad elephant illustration"
+                fill
+                style={{ objectFit: "contain" }}
+                className="opacity-80"
+              />
+            </div>
+          </div>
+
+          <div className="absolute inset-0 max-w-screen overflow-hidden">
+            {problems.map((problem, index) => {
+              const angle = (index * 2 * Math.PI) / problems.length;
+              const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 140 : 250;
+              const x = Math.cos(angle) * radius;
+              const y = Math.sin(angle) * radius;
+
+              return (
+                <motion.div
+                  key={index}
+                  className="absolute"
+                  style={{
+                    left: `calc(50% + ${x}px)`,
+                    top: `calc(50% + ${y}px)`,
+                    transform: "translate(-50%, -50%)",
+                  }}
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{
+                    scale: 1,
+                    opacity: 1,
+                    y: [0, -10, 0],
+                  }}
+                  transition={{
+                    duration: 0.5,
+                    delay: index * 0.2,
+                    type: "spring",
+                    y: {
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    },
+                  }}
+                >
+                  <Card className="p-3 md:p-6 text-center backdrop-blur-sm bg-background/80 relative max-w-[140px] md:max-w-[280px]">
+                    <div className="absolute -top-2 -right-2 bg-red-500 rounded-full p-1">
+                      <X className="text-white w-4 h-4 md:w-6 md:h-6" />
+                    </div>
+                    <h3 className="text-sm md:text-lg font-semibold mb-1 md:mb-2">
                       {problem.title}
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-xs md:text-sm text-muted-foreground hidden md:block">
                       {problem.description}
                     </p>
-                  </div>
-                </Card>
-              </motion.div>
-            </FadeIn>
-          ))}
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
