@@ -23,18 +23,18 @@ const footerLinks = {
   contact: [
     {
       label: "hello@umojab2b.com",
-      href: "mailto:hello@umojab2b.com",
+      href: "mailto:hello@umojab2b.com", 
       icon: <Mail className="h-4 w-4" />,
     },
     {
-      label: "+263 777 150 345",
-      href: "tel:+263777150345",
-      icon: <Phone className="h-4 w-4" />,
+      label: "support@umojab2b.com",
+      href: "mailto:support@umojab2b.com",
+      icon: <Mail className="h-4 w-4" />,
     },
     {
-      label: "+263 771 535 326",
-      href: "tel:+263771535326",
-      icon: <Phone className="h-4 w-4" />,
+      label: "sales@umojab2b.com", 
+      href: "mailto:sales@umojab2b.com",
+      icon: <Mail className="h-4 w-4" />,
     },
   ],
 };
