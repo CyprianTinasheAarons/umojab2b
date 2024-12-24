@@ -45,7 +45,7 @@ export function Hero() {
                       <span className="text-sm font-semibold">
                         Starting from
                       </span>
-                      <span className="mx-2 text-xl font-bold">$249.99 🎉</span>
+                      <span className="mx-2 text-xl font-bold">$499.99 🎉</span>
                     </div>
                   </AnimatedGradientText>
                 </div>

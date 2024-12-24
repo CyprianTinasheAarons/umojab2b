@@ -7,14 +7,9 @@ const comparisons = [
   {
     feature: "Affordable Pricing",
     umojab2b: {
-      text: "Starting at $249.99 (one-time) + $9.99/month",
+      text: "Starting at $499.99 (one-time)",
       highlight: true,
       icon: Check,
-    },
-    shopify: {
-      text: "Starting at $29/month but can add up over time",
-      highlight: false,
-      icon: Minus,
     },
     agency: {
       text: "High upfront cost, typically $500–$2000",
@@ -29,11 +24,6 @@ const comparisons = [
       highlight: true,
       icon: Check,
     },
-    shopify: {
-      text: "Larger businesses with high budgets",
-      highlight: false,
-      icon: Minus,
-    },
     agency: {
       text: "Companies needing complex custom solutions",
       highlight: false,
@@ -47,11 +37,6 @@ const comparisons = [
       highlight: true,
       icon: Check,
     },
-    shopify: {
-      text: "Ongoing monthly costs",
-      highlight: false,
-      icon: Minus,
-    },
     agency: {
       text: "Expensive to set up and maintain",
       highlight: false,
@@ -63,11 +48,6 @@ const comparisons = [
     umojab2b: {
       text: "SEO, custom domain, admin panel, AI tools, branding kit, flexible payments",
       highlight: true,
-      icon: Check,
-    },
-    shopify: {
-      text: "Product management, payment options, app integrations",
-      highlight: false,
       icon: Check,
     },
     agency: {
@@ -83,11 +63,6 @@ const comparisons = [
       highlight: true,
       icon: Check,
     },
-    shopify: {
-      text: "Easy-to-use platform with robust support",
-      highlight: false,
-      icon: Check,
-    },
     agency: {
       text: "Varies, may require technical help",
       highlight: false,
@@ -100,11 +75,6 @@ const comparisons = [
       text: "Complete branding kit provided",
       highlight: true,
       icon: Check,
-    },
-    shopify: {
-      text: "Extra branding tools often require paid apps",
-      highlight: false,
-      icon: X,
     },
     agency: {
       text: "Full branding, but often expensive",
@@ -119,11 +89,6 @@ const comparisons = [
       highlight: true,
       icon: Check,
     },
-    shopify: {
-      text: "24/7 support available",
-      highlight: false,
-      icon: Check,
-    },
     agency: {
       text: "Varies depending on the agency",
       highlight: false,
@@ -135,11 +100,6 @@ const comparisons = [
     umojab2b: {
       text: "Designed to grow with your business, with add-ons for scaling",
       highlight: true,
-      icon: Check,
-    },
-    shopify: {
-      text: "Scales well with different pricing plans",
-      highlight: false,
       icon: Check,
     },
     agency: {
@@ -167,7 +127,7 @@ export function Comparisons({ id }: { id: string }) {
         </div>
 
         <div className="mt-16 overflow-hidden rounded-xl border border-[#feef8a] bg-white shadow-sm">
-          <div className="grid grid-cols-4 gap-px bg-[#fddf47]">
+          <div className="grid grid-cols-3 gap-px bg-[#fddf47]">
             <div className="bg-[#fef9c3] p-6">
               <span className="text-sm font-medium text-[#713e12]">
                 Features
@@ -176,11 +136,6 @@ export function Comparisons({ id }: { id: string }) {
             <div className="bg-[#faca15]/20 p-6">
               <span className="text-sm font-semibold text-[#ca8804]">
                 UmojaB2B
-              </span>
-            </div>
-            <div className="bg-[#fef9c3] p-6">
-              <span className="text-sm font-medium text-[#713e12]">
-                Shopify
               </span>
             </div>
             <div className="bg-[#fef9c3] p-6">
@@ -198,7 +153,7 @@ export function Comparisons({ id }: { id: string }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="grid grid-cols-4 gap-px"
+                className="grid grid-cols-3 gap-px"
               >
                 <div className="bg-white p-6">
                   <span className="font-medium text-[#713e12]">
@@ -226,14 +181,6 @@ export function Comparisons({ id }: { id: string }) {
                       }`}
                     >
                       {comparison.umojab2b.text}
-                    </span>
-                  </div>
-                </div>
-                <div className="bg-white p-6">
-                  <div className="flex items-center gap-2">
-                    <comparison.shopify.icon className="h-5 w-5 flex-shrink-0 text-[#854c0e]" />
-                    <span className="text-sm text-[#854c0e]">
-                      {comparison.shopify.text}
                     </span>
                   </div>
                 </div>

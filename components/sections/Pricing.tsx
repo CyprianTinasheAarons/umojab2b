@@ -19,8 +19,8 @@ const tiers = [
     mainIcon: <RocketLaunchIcon className="h-8 w-8 text-[#fdc412]" />,
     description:
       "Perfect for small African businesses ready to go digital and expand their reach.",
-    setupPrice: "$249.99",
-    monthlyPrice: "$9.99",
+    setupPrice: "$499.99",
+    monthlyPrice: "$0",
     href: "/store",
     features: [
       { icon: <StarIcon className="h-4 w-4" />, text: "SEO for Visibility" },
@@ -132,9 +132,9 @@ export function Pricing({ id }: { id?: string }) {
                 {tier.setupPrice}
               </p>
               <p className="text-sm text-[#87690c]">one-time setup</p>
-              <p className="mt-2 text-lg font-semibold text-[#cd9b01]">
+              {/* <p className="mt-2 text-lg font-semibold text-[#cd9b01]">
                 + {tier.monthlyPrice}/month
-              </p>
+              </p> */}
             </div>
             <p className="mt-6 text-base/7 text-center text-[#87690c]">
               {tier.description}
